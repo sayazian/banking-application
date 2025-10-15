@@ -87,7 +87,10 @@ public class UserService {
 
     private static void updateUserInfoFromForm(User user, User managedUser) {
         managedUser.setUsername(user.getUsername());
-        managedUser.setPassword(user.getPassword());
+        if (managedUser.getPassword() == null || managedUser.getPassword().isBlank()) {
+            // Keep the old password
+            managedUser.setPassword(user.getPassword());
+        }
         managedUser.setName(user.getName());
     }
 
