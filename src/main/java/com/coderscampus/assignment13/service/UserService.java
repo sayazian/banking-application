@@ -16,12 +16,12 @@ import com.coderscampus.assignment13.repository.UserRepository;
 @Service
 public class UserService {
 
-    private UserRepository userRepository;
-    private AccountRepository accountRepository;
-    private AddressService addressService;
+    private final UserRepository userRepository;
+    private final AccountRepository accountRepository;
+    private final AddressService addressService;
 
-    public UserService(UserRepository userRepositorysitory, AccountRepository accountRepository, AddressService addressService) {
-        this.userRepository = userRepositorysitory;
+    public UserService(UserRepository userRepository, AccountRepository accountRepository, AddressService addressService) {
+        this.userRepository = userRepository;
         this.accountRepository = accountRepository;
         this.addressService = addressService;
     }
