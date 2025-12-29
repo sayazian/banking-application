@@ -1,4 +1,4 @@
-# Assignment 13 starter
+# Banking App starter
 
 To use this template:
 
